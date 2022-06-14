@@ -5,7 +5,7 @@ import {
   HomeContainer,
   Main,
   StoriesSection,
-} from './homeStyled';
+} from './home-styled';
 import { useEffect, useState } from 'react';
 import {
   actionStory,

@@ -38,8 +38,8 @@ export const Header = styled.header`
   .header {
     display: flex;
     justify-content: space-between;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     &__logo {
       img {
         width: 78px;
@@ -117,6 +117,9 @@ export const StoriesSection = styled.div`
     color: #646464;
     font-weight: 600;
     padding: 0 15px;
+    @media ${device.mobileL} {
+      font-size: 14px;
+    }
   }
   .actions {
     display: flex;
@@ -141,7 +144,7 @@ export const StoriesSection = styled.div`
       outline: none;
       width: 270px;
       height: 50px;
-      color: #fff;
+      color: ${variables.mainWhiteColor};
 
       &:nth-child(1) {
         background-color: #2c7edb;
@@ -152,6 +155,10 @@ export const StoriesSection = styled.div`
         background-color: ${variables.mainGreenColor};
         border-bottom: 3px solid #19984e;
       }
+      @media ${device.mobileL} {
+        width: 150px;
+        height: 40px;
+      }
     }
   }
 `;
@@ -161,7 +168,6 @@ export const FooterStyled = styled.footer`
   padding: 42px 0;
   border-top: 1px solid #cccccc;
   color: #969696;
-  font-family: 'NunitoSans';
   font-weight: 600;
   font-size: 14px;
   @media ${device.mobileL} {
@@ -170,5 +176,8 @@ export const FooterStyled = styled.footer`
 `;
 
 export const Main = styled.main`
-  min-height: calc(100vh - 290px);
+  min-height: calc(100vh - 294.5px);
+  @media ${device.mobileL} {
+    min-height: calc(100vh - 320px);
+  }
 `;
