@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .code {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 14px;
+            line-height: 19px;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="code">
+            const simpleArray = "1 2 3 4 5".split(" ").map(num => parseInt(num));
+            function miniMaxSum(arr) {
+            const [maxValue, minValue] = [Math.max(...arr), Math.min(...arr)]
+            const [maxSum, minSum] = [
+            arr.reduce((a,b) => a+b) - maxValue,
+            arr.reduce((a,b) => a+b) - minValue
+            ]
+             return `${minSum} ${maxSum}`
+            }
+            function totalArray(arr) {
+                return arr.reduce((partialSum, a) => partialSum + a, 0)
+            }
+            function minInArray(arr) {
+                return Math.min(...arr)
+            }
+            function maxInArray(arr) {
+                return Math.max(...arr);
+            }
+            function findEvenElements(arr) {
+                return arr.filter(num => num % 2 === 0)
+            }
+            function findOddElements(arr) {
+                return arr.filter(num => num % 2 !== 0)
+            }
+            console.log('miniMaxSum',miniMaxSum(simpleArray));
+            console.log('simpleArray',totalArray(simpleArray))
+            console.log('minInArray',minInArray(simpleArray))
+            console.log('maxInArray',maxInArray(simpleArray))
+            console.log('findEvenElements', findEvenElements(simpleArray));
+            console.log('findOddElements', findOddElements(simpleArray));
+        </div>
+
+    </div>
+    <script>
+      const simpleArray = "1 2 3 4 5".split(" ").map(num => parseInt(num));
+      function miniMaxSum(arr) {
+        const [maxValue, minValue] = [Math.max(...arr), Math.min(...arr)]
+        const [maxSum, minSum] = [
+            arr.reduce((a,b) => a+b) - maxValue,
+            arr.reduce((a,b) => a+b) - minValue
+        ]
+        return `${minSum} ${maxSum}`
+      }
+      function totalArray(arr) {
+          return arr.reduce((partialSum, a) => partialSum + a, 0)
+      }
+      function minInArray(arr) {
+       return Math.min(...arr)
+      }
+      function maxInArray(arr) {
+          return Math.max(...arr);
+      }
+      function findEvenElements(arr) {
+          return arr.filter(num => num % 2 === 0)
+      }
+      function findOddElements(arr) {
+          return arr.filter(num => num % 2 !== 0)
+      }
+      console.log('miniMaxSum',miniMaxSum(simpleArray));
+      console.log('simpleArray',totalArray(simpleArray))
+      console.log('minInArray',minInArray(simpleArray))
+      console.log('maxInArray',maxInArray(simpleArray))
+      console.log('findEvenElements', findEvenElements(simpleArray));
+      console.log('findOddElements', findOddElements(simpleArray));
+    </script>
+</body>
+</html>
